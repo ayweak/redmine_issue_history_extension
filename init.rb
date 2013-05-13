@@ -7,6 +7,6 @@ Redmine::Plugin.register :redmine_issue_history_extension do
   author 'ayweak'
   description 'This is a plugin for Redmine'
   version '0.0.1'
-  url ''
+  url 'https://github.com/ayweak/redmine_issue_history_extension'
   author_url 'https://github.com/ayweak'
 end
