@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-
+
+ja:
+  issue_history_extension_order_asc: "昇順"
+  issue_history_extension_order_desc: "降順"
+  issue_history_extension_hide_journal_details: "詳細を隠す"
+  issue_history_extension_hide_journal_notes: "注記を隠す"

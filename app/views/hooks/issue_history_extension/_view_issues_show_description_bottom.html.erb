@@ -1,0 +1,42 @@
+<%# -*- coding: utf-8 -*- %>
+
+<%- html_text = content_tag :p, :id => 'issue_history_extension_controller' do -%>
+  <%= link_to label_order, '#', :id => 'issue_history_extension_order', :class => 'sort ' + class_order -%>
+  |
+  <%= label_tag do -%>
+    <%= check_box_tag 'issue_history_extension_hide_journal_details' -%>
+    <%= l(:issue_history_extension_hide_journal_details) -%>
+  <%- end -%>
+  <%= label_tag do -%>
+    <%= check_box_tag 'issue_history_extension_hide_journal_notes' -%>
+    <%= l(:issue_history_extension_hide_journal_notes) -%>
+  <%- end -%>
+<%- end -%>
+
+<%= javascript_tag do -%>
+jQuery(function($) {
+    $('#history > h3:first').after('<%= escape_javascript html_text %>');
+
+    $('#issue_history_extension_order').on('click', function() {
+        if ($(this).hasClass('desc')) {
+            $(this).removeClass('desc').addClass('asc').text('<%= escape_javascript l(:issue_history_extension_order_asc) %>');
+        } else {
+            $(this).removeClass('asc').addClass('desc').text('<%= escape_javascript l(:issue_history_extension_order_desc) %>');
+        }
+
+        $('#history > div').each(function() { $(this).insertAfter('#issue_history_extension_controller') });
+
+        return false;
+    });
+
+    $('#issue_history_extension_hide_journal_details').on('click', function() {
+        var value = $(this).attr('checked') ? 'none' : 'block';
+        $('#history > div > div > ul').each(function() { this.style.display = value; });
+    });
+
+    $('#issue_history_extension_hide_journal_notes').on('click', function() {
+        var value = $(this).attr('checked') ? 'none' : 'block';
+        $('#history > div > div > div').each(function() { this.style.display = value; });
+    });
+});
+<%- end -%>

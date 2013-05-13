@@ -1,3 +1,7 @@
-# English strings go here for Rails i18n
+# -*- coding: utf-8 -*-
+
 en:
-  # my_label: "My label"
+  issue_history_extension_order_asc: "Ascending"
+  issue_history_extension_order_desc: "Descending"
+  issue_history_extension_hide_journal_details: "Hide details"
+  issue_history_extension_hide_journal_notes: "Hide notes"

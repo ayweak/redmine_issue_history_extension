@@ -1,3 +1,25 @@
-= redmine_issue_history_extension
+= Redmine Issue History Extension
 
-Description goes here
+TODO
+
+== Compatible
+
+Compatible with Redmine 2.3.x.
+
+Tested with:
+
+* Redmine 2.3.0
+* Ruby 1.9.3p194
+* Firefox 20.0
+
+== Install
+
+TODO
+
+== Uninstall
+
+TODO
+
+== License
+
+This plugin is licensed under the GNU GPL v2. See gpl-2.0.txt for details.
